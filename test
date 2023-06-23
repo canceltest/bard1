@@ -255,18 +255,6 @@
       "Description": ""
     },
     {
-      "Command": "comment",
-      "Target": "storeText // ${sayingCSV[${sayingIndex}][0]} - ${templateType}",
-      "Value": "combinedText",
-      "Description": "manny - get data from title field to enter into search"
-    },
-    {
-      "Command": "comment",
-      "Target": "echo // ${combinedText}",
-      "Value": "",
-      "Description": "debugging: Print combinedText"
-    },
-    {
       "Command": "click",
       "Target": "xpath=//div[@class=\"mke-vue-wrapper\"]/div/div[2]/div[2]/div/button",
       "Value": "",
@@ -317,24 +305,6 @@
     {
       "Command": "while",
       "Target": "${!statusOK}",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "comment",
-      "Target": "pause // 2000",
-      "Value": "",
-      "Description": ""
-    },
-    {
-      "Command": "comment",
-      "Target": "storeXpathCount // xpath=//tr[contains(@class,\"sync-products-list-item\")][1]/td[5]/div/div/div/a",
-      "Value": "isLoadingFinished",
-      "Description": ""
-    },
-    {
-      "Command": "comment",
-      "Target": "pause // 5000",
       "Value": "",
       "Description": ""
     },
