@@ -1,0 +1,654 @@
+{
+  "Name": "V3Printful_2023_6_1-hat-Mockup TEXT",
+  "CreationDate": "2023-6-23",
+  "Commands": [
+    {
+      "Command": "store",
+      "Target": "fast",
+      "Value": "!replayspeed",
+      "Description": ""
+    },
+    {
+      "Command": "csvReadArray",
+      "Target": "sayings-hat.csv",
+      "Value": "sayingCSV",
+      "Description": "Get data from Saying CSV"
+    },
+    {
+      "Command": "csvReadArray",
+      "Target": "printful-hat.csv",
+      "Value": "printfulCSV",
+      "Description": "Get data from Printify CSV"
+    },
+    {
+      "Command": "comment",
+      "Target": "Getting template name",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${printfulCSV[1][2]}",
+      "Value": "templateName",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${printfulCSV[1][3]}",
+      "Value": "templateType",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${templateName}",
+      "Value": "",
+      "Description": "Check tempalte name"
+    },
+    {
+      "Command": "store",
+      "Target": "1",
+      "Value": "sayingIndex",
+      "Description": "Check tempalte name"
+    },
+    {
+      "Command": "while",
+      "Target": "${sayingIndex} < ${sayingCSV.length}",
+      "Value": "sayingIndex",
+      "Description": "Check tempalte name"
+    },
+    {
+      "Command": "type",
+      "Target": "id=sync-product-list-search",
+      "Value": "${templateName}",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//tr[contains(@class,\"sync-products-list-item\")][1]/td[5]/div/div/div/a",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "linkText=Duplicate",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "5000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "Start in design page",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class=\"swipe-container\"]/div/div[2]/div/a",
+      "Value": "",
+      "Description": "select three dot button"
+    },
+    {
+      "Command": "XClick",
+      "Target": "xpath=//div[@class=\"swipe-container\"]/div/div[2]/div/div/li[2]/a",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "Insert FirstRow Product design",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//aside/nav[2]/button[1]",
+      "Value": "",
+      "Description": "Click uploads button"
+    },
+    {
+      "Command": "store",
+      "Target": "${printfulCSV[1][0]}",
+      "Value": "imageHeaderName",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var sayingHeaders = ${sayingCSV[0]}; \nreturn sayingHeaders.indexOf(${imageHeaderName}.toString());",
+      "Value": "imageHeaderIndex",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${sayingCSV[${sayingIndex}][${imageHeaderIndex}]}",
+      "Value": "imageFilePath",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "imageFilePath: ${imageFilePath}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=file-library-search",
+      "Value": "${imageFilePath}",
+      "Description": "7. Upload a light design file"
+    },
+    {
+      "Command": "pause",
+      "Target": "5000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XMove",
+      "Target": "xpath=//*[@id=\"file-library-list\"]//div[@class=\"row\"]/div/div/a/div",
+      "Value": "",
+      "Description": "8. Click \"\"Apply\""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "waitForElementVisible",
+      "Target": "xpath=//*[@id=\"file-library-list\"]//div[@class=\"row\"]/div/div/a/div/div/div/a",
+      "Value": "",
+      "Description": "8. Click \"\"Apply\""
+    },
+    {
+      "Command": "XMove",
+      "Target": "xpath=//*[@id=\"file-library-list\"]//div[@class=\"row\"]/div/div/a/div/div/div/a",
+      "Value": "",
+      "Description": "8. Click \"\"Apply\""
+    },
+    {
+      "Command": "XClick",
+      "Target": "xpath=//*[@id=\"file-library-list\"]//div[@class=\"row\"]/div/div/a/div/div/div/a",
+      "Value": "",
+      "Description": "8. Click \"\"Apply\""
+    },
+    {
+      "Command": "pause",
+      "Target": "5000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"js--design-maker\"]/div/div[2]/div/div/div[2]/div/button",
+      "Value": "",
+      "Description": "8. Click \"\"Apply\""
+    },
+    {
+      "Command": "pause",
+      "Target": "1500",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "mbmlqp_dpi_192.png",
+      "Value": "",
+      "Description": "8. Click \"mockup hat 2\" Click \"select\" and target if need to change"
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": "wait after mockup type, before grid selection"
+    },
+    {
+      "Command": "XClick",
+      "Target": "h1mx4h_dpi_192.png",
+      "Value": "",
+      "Description": "8. Click grid view"
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": "wait for all variants to show in grid view"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class=\"mke-vue-wrapper\"]/div/div[2]/div[2]/div/button",
+      "Value": "",
+      "Description": "8. Click \"continue\""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=product-push-title-input",
+      "Value": "${sayingCSV[${sayingIndex}][0]} - ${templateType}",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class=\"mke-vue-wrapper\"]/div/div[2]/div[2]/div/button",
+      "Value": "",
+      "Description": "8. Click \"\"Apply\""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class=\"mke-vue-wrapper\"]/div/div[2]/div[2]/div/button",
+      "Value": "",
+      "Description": "8. Click \"\"Apply\""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.printful.com/dashboard/sync?store=8829428&syncProductType=all&page=1&search=",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "55000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "0",
+      "Value": "isLoadingFinished",
+      "Description": ""
+    },
+    {
+      "Command": "while",
+      "Target": "${isLoadingFinished} == 0",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeXpathCount",
+      "Target": "xpath=//tr[contains(@class,\"sync-products-list-item\")][1]/td[5]/div/div/div/a",
+      "Value": "isLoadingFinished",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "5000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "Start variant colors",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=sync-product-list-search",
+      "Value": "${sayingCSV[${sayingIndex}][0]} - ${templateType}",
+      "Description": "search for product just created"
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": "pause for product to load"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//tr[contains(@class,\"sync-products-list-item\")][1]/td[5]/div/div/a",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "5000",
+      "Value": "printfulRowIndex",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "2",
+      "Value": "printfulRowIndex",
+      "Description": ""
+    },
+    {
+      "Command": "while",
+      "Target": "${printfulRowIndex} < ${printfulCSV.length}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${printfulCSV[${printfulRowIndex}][0]}",
+      "Value": "imageHeaderName",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var sayingHeaders = ${sayingCSV[0]}; \nreturn sayingHeaders.indexOf(${imageHeaderName}.toString());",
+      "Value": "imageHeaderIndex",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${sayingCSV[${sayingIndex}][${imageHeaderIndex}]}",
+      "Value": "imageFilePath",
+      "Description": "change saying index"
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var colors= ${printfulCSV[${printfulRowIndex}][1]}; \nreturn colors.split(',');",
+      "Value": "printfulColors",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "printfulColors: ${printfulColors}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "forEach",
+      "Target": "printfulColors",
+      "Value": "colorIndex",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"sync-variants-container\" and @class=\"sync-row-selector\"]/div[2]/div[4]/div/div/div/div/div/a[${colorIndex}]",
+      "Value": "",
+      "Description": "Color Button"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"sync-variants-container\"  and @class=\"sync-row-selector\"]/div[2]/div[5]/div/div/div/div/div/div/div/div/input",
+      "Value": "",
+      "Description": "select all check box"
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//a[@id='edit-print-files']",
+      "Value": "Change print file",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "4000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class=\"swipe-container\"]/div/div[2]/div/a",
+      "Value": "",
+      "Description": "select three dot button"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class=\"swipe-container\"]/div/div[2]/div/div/li[2]/a",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "Select upload side bar",
+      "Value": "",
+      "Description": "Click uploads button"
+    },
+    {
+      "Command": "XClick",
+      "Target": "xpath=//aside/nav[2]/button[1]",
+      "Value": "",
+      "Description": "Click uploads button"
+    },
+    {
+      "Command": "store",
+      "Target": "${printfulCSV[${printfulRowIndex}][0]}",
+      "Value": "imageHeaderName",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var sayingHeaders = ${sayingCSV[0]}; \nreturn sayingHeaders.indexOf(${imageHeaderName}.toString());",
+      "Value": "imageHeaderIndex",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${sayingCSV[${sayingIndex}][${imageHeaderIndex}]}",
+      "Value": "imageFilePath",
+      "Description": "change saying index"
+    },
+    {
+      "Command": "echo",
+      "Target": "imageFilePath: ${imageFilePath}",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=file-library-search",
+      "Value": "${imageFilePath}",
+      "Description": "7. Upload a light design file"
+    },
+    {
+      "Command": "pause",
+      "Target": "5000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XMove",
+      "Target": "xpath=//*[@id=\"file-library-list\"]/div[2]/div/div/div/a/div",
+      "Value": "",
+      "Description": "8. Click \"\"Apply\""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "waitForElementVisible",
+      "Target": "xpath=//*[@id=\"file-library-list\"]//div[@class=\"row\"]/div/div/a/div/div/div/a",
+      "Value": "",
+      "Description": "8. Click \"\"Apply\""
+    },
+    {
+      "Command": "XMove",
+      "Target": "xpath=//*[@id=\"file-library-list\"]//div[@class=\"row\"]/div/div/a/div/div/div/a",
+      "Value": "",
+      "Description": "8. Click \"\"Apply\""
+    },
+    {
+      "Command": "XClick",
+      "Target": "xpath=//*[@id=\"file-library-list\"]//div[@class=\"row\"]/div/div/a/div/div/div/a",
+      "Value": "",
+      "Description": "8. Click \"\"Apply\""
+    },
+    {
+      "Command": "pause",
+      "Target": "4000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"js--design-maker\"]/div/div[2]/div/div/div[2]/div/button",
+      "Value": "",
+      "Description": "Proceed."
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "srlpod_dpi_192.png",
+      "Value": "",
+      "Description": "select 2nd mockup hat"
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[@class=\"modal-footer-sticky\"]/div/div/div/div[2]/div[2]/div/button",
+      "Value": "",
+      "Description": "Continue"
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"sync-variants-container\"]/div[2]/div[4]/div/div/div/div/div/a[${colorIndex}]",
+      "Value": "",
+      "Description": "Color Button"
+    },
+    {
+      "Command": "end",
+      "Target": "printfulColors",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number(${printfulRowIndex}) + 1;",
+      "Value": "printfulRowIndex",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "Move to next saying",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number(${sayingIndex}) + 1;",
+      "Value": "sayingIndex",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.printful.com/dashboard/sync?store=8829428&syncProductType=all&page=1&search=",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "4000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}
