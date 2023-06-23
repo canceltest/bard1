@@ -250,15 +250,33 @@
     },
     {
       "Command": "pause",
-      "Target": "500",
+      "Target": "5000",
       "Value": "",
       "Description": ""
     },
     {
       "Command": "store",
-      "Target": "${type(${sayingCSV[${sayingIndex}][0]})} - ${templateType}",
-      "Value": "${sayingTitle}",
+      "Target": "${sayingCSV[${sayingIndex}][0]}",
+      "Value": "sayingName",
+      "Description": "store the saying name"
+    },
+    {
+      "Command": "echo",
+      "Target": "${sayingName}",
+      "Value": "",
+      "Description": "print value"
+    },
+    {
+      "Command": "store",
+      "Target": "${sayingName} - ${templateType}",
+      "Value": "sayingTitle",
       "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${sayingTitle}",
+      "Value": "",
+      "Description": "print value of saying title"
     },
     {
       "Command": "pause",
