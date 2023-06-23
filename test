@@ -255,14 +255,14 @@
       "Description": ""
     },
     {
-      "Command": "storeText",
-      "Target": "${sayingCSV[${sayingIndex}][0]} - ${templateType}",
+      "Command": "comment",
+      "Target": "storeText // ${sayingCSV[${sayingIndex}][0]} - ${templateType}",
       "Value": "combinedText",
       "Description": "manny - get data from title field to enter into search"
     },
     {
-      "Command": "echo",
-      "Target": "${combinedText}",
+      "Command": "comment",
+      "Target": "echo // ${combinedText}",
       "Value": "",
       "Description": "debugging: Print combinedText"
     },
@@ -341,7 +341,7 @@
     {
       "Command": "type",
       "Target": "id=sync-product-list-search",
-      "Value": "${combinedText}",
+      "Value": "${sayingCSV[${sayingIndex}][0]} - ${templateType}",
       "Description": "search for product just created"
     },
     {
@@ -359,7 +359,7 @@
     {
       "Command": "type",
       "Target": "id=sync-product-list-search",
-      "Value": "${combinedText}",
+      "Value": "${sayingCSV[${sayingIndex}][0]} - ${templateType}",
       "Description": "search for product just created"
     },
     {
